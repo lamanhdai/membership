@@ -1,4 +1,4 @@
-import Yup from 'yup';
+import * as Yup from 'yup';
 
 const loginValidationSchema = Yup.object().shape({
   username: Yup.string()
