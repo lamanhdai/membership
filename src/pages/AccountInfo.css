@@ -1,0 +1,82 @@
+.bg-account {
+  background: url(../assets/img/bg-account.png) no-repeat right top;
+  min-height: 700px;
+}
+
+.welcome-text {
+  color: #EC5858;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.user_top {
+  margin-top: 130px;
+}
+.user_card {
+  border-radius: 20px 20px 0 0;
+  background-color: #FFDCDC;
+  padding: 40px 20px 90px;
+}
+.user_card_feature {
+  color: rgb(236, 88, 88);
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 6px;
+}
+
+.user_card_text {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.user_level {
+  background-image: linear-gradient(to bottom right, rgba(255,255,255), rgba(236,88,88));
+  border: 10px solid #fff;
+}
+
+.user_level_content {
+  min-width: 140px;
+  min-height: 140px;
+  background: #fff;
+  border-radius: 100%;
+  padding-top: 25px;
+}
+
+.user_background_level {
+  top: -60px;
+  left: 50%;
+  margin-left: -90px;
+}
+
+.user_summary {
+  min-height: 180px;
+}
+
+.user_navigantion {
+  background: #FF9595;
+}
+.wave {
+  position: relative;
+  height: 18px;
+  background: #FF9595;
+}
+.wave-after {
+  position: absolute;
+  border-radius: 100% 80%;
+  width: 39%;
+  height: 40px;
+  background-color: #fff;
+  transform: rotate(2deg);
+  right: -7px;
+  top: -24px;
+}
+.wave-before {
+  position: absolute;
+  border-radius: 100% 80%;
+  width: 74%;
+  height: 60px;
+  background-color: #FF9595;
+  transform: rotate(3deg);
+  left: -22px;
+  top: -23px;
+}
