@@ -38,10 +38,7 @@ function AccountInfo() {
                 <div className="user_card_text ml-10">0</div>
               </div>
             </div>
-            <div className="wave">
-              <div className="wave-before"></div>
-              <div className="wave-after"></div>
-            </div>
+            <div className="wave"><svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg" width="50%" className="inline" style={{position: "absolute",bottom: "-30px",left: "2px"}}><ellipse cx="50" cy="5" rx="51" ry="5" fill="#FF9595"></ellipse></svg><svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg" width="50%" className="inline" style={{position: "absolute",right: "1px",bottom: "-19px",zIndex: 2}}><ellipse cx="50" cy="5" rx="51" ry="5" fill="white"></ellipse></svg></div>
             <div className="user_navigantion p-4 rounded-b relative">
             </div>
           </div>

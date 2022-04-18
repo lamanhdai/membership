@@ -57,26 +57,4 @@
 }
 .wave {
   position: relative;
-  height: 18px;
-  background: #FF9595;
-}
-.wave-after {
-  position: absolute;
-  border-radius: 100% 80%;
-  width: 39%;
-  height: 40px;
-  background-color: #fff;
-  transform: rotate(2deg);
-  right: -7px;
-  top: -24px;
-}
-.wave-before {
-  position: absolute;
-  border-radius: 100% 80%;
-  width: 74%;
-  height: 60px;
-  background-color: #FF9595;
-  transform: rotate(3deg);
-  left: -22px;
-  top: -23px;
 }
