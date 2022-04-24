@@ -10,7 +10,7 @@
 }
 
 .user_top {
-  margin-top: 130px;
+  margin-top: 60px;
 }
 .user_card {
   border-radius: 20px 20px 0 0;
@@ -52,24 +52,65 @@
   min-height: 180px;
 }
 
-.user_navigantion {
+.user_navigation {
   background: #FF9595;
 }
 .background-line {
   margin: 0 -20px;
-  bottom: 0;
+  bottom: 72px;
   left: 0;
   right: 0;
-  padding-top: 6.2em;
 }
 .curve-line {
   position: absolute;
   z-index: 5;
-  top: 0;
+  top: -97px;
 }
 
 .backscene {
   width: 100%;
   height: 80%;
-  bottom: 0;
+  top: -65px;
+  padding-top: 137px;
+}
+
+.wave {
+  bottom: 100%;
+  margin: 0 20px;
+  z-index: 10;
+}
+
+.bg-notice {
+  background-image: linear-gradient(to right, #FF9595, #FF5D5D);
+}
+
+.btn-primary {
+  color: #EC5858;
+}
+
+.button-has-left-icon {
+  width: 18px;
+  display: inline-block;
+}
+
+.button-text {
+  padding-left: 5px;
+}
+
+.tab {
+  display: flex;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
+}
+.tab .item {
+  flex: 1 1;
+  padding: 10px 0;
+  color: gray;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.active {
+  color: #EC5858;
+  border-bottom: 3px solid #EC5858;
 }

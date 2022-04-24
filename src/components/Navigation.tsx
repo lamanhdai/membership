@@ -7,7 +7,7 @@ function Reward() {
           {/* <img src="/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo"/> */}
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Membership</span>
         </a>
-        <div className="flex items-center md:order-2">
+        <div className="flex items-center md:order-2 hidden">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-14 md:mt-0 md:text-sm md:font-medium">
             <li>
               <a href="#" className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-black md:p-0 dark:text-white" aria-current="page">Home</a>
@@ -23,8 +23,6 @@ function Reward() {
             Username
           </button></li>
           </ul>
-          
-
           <div className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
             <div className="py-3 px-4">
               <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
