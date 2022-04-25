@@ -57,14 +57,20 @@
 }
 .background-line {
   margin: 0 -20px;
-  bottom: 72px;
+  bottom: 56px;
   left: 0;
   right: 0;
 }
 .curve-line {
   position: absolute;
   z-index: 5;
-  top: -97px;
+  top: -80px;
+}
+
+@media screen and (min-width: 920px) {
+  .curve-line {
+    top: -100px;
+  }
 }
 
 .backscene {
@@ -75,7 +81,7 @@
 }
 
 .wave {
-  bottom: 100%;
+  bottom: 0;
   margin: 0 20px;
   z-index: 10;
 }
@@ -113,4 +119,12 @@
 .active {
   color: #EC5858;
   border-bottom: 3px solid #EC5858;
+}
+
+.group-star {
+  position: absolute;
+    width: 150px;
+    z-index: 10;
+    bottom: 0px;
+    right: 20%;
 }
