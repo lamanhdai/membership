@@ -112,7 +112,7 @@ function AccountInfo() {
   return (
     <div className="">
       <Navigation/>
-      <div className="container mx-auto">
+      <div className="container mx-auto user">
         <div className="user_card user_top">
           <div className="relative">
             <div className="welcome-text">Welcome, Bruce!</div>
@@ -173,11 +173,11 @@ function AccountInfo() {
           {
             activeTab.transactionList?.length?
               activeTab.transactionList.map(detail => (
-                <div key={detail.id}>
+                <div key={detail.id} className="shadow-lg">
                   <img className="aspect-video w-96 rounded-t-2xl object-cover object-center" src={detail.img.default} />
                   <div className="p-4">
-              <small className="text-blue-400 text-xs">{detail.category}</small>
-                    <h1 className="text-2xl font-medium text-slate-600 pb-2">{detail.name}</h1>
+                    <small className="voucher-category">{detail.category}</small>
+                    <h1 className="text-lg font-medium text-slate-600 pb-2">{detail.name}</h1>
                   </div>
                 </div>
               )) :
