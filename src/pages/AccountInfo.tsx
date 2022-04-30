@@ -173,7 +173,7 @@ function AccountInfo() {
           {
             activeTab.transactionList?.length?
               activeTab.transactionList.map(detail => (
-                <div key={detail.id} className="shadow-lg">
+                <div key={detail.id} className="shadow-lg cursor-pointer">
                   <img className="aspect-video w-96 rounded-t-2xl object-cover object-center" src={detail.img.default} />
                   <div className="p-4">
                     <small className="voucher-category">{detail.category}</small>

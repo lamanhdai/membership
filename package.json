@@ -39,7 +39,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./src/lib.css --watch"
+    "watch:css": "tailwindcss -i ./src/input.css -o ./src/lib.css --watch",
+    "taildwind-full-config": "npx tailwindcss init --full"
   },
   "eslintConfig": {
     "extends": [

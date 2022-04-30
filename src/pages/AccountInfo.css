@@ -136,4 +136,9 @@
   color: #EC5858;
   font-weight: 500;
   font-size: 16px;
+  border-width: 2px;
+  border-image: linear-gradient(45deg, rgb(180, 141, 141) 0%, #EC5858 100%);
+  border-image-slice: 9;
+  border-style: solid;
+  padding: 0 3px;
 }
