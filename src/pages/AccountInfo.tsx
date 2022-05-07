@@ -6,108 +6,11 @@ import iconReward from 'assets/img/reward.png'
 import iconMainStar from 'assets/img/main_star.png'
 import clock from 'assets/img/clock.png'
 import iconGroupStar from 'assets/img/group_star.png'
-import * as voucher_01 from 'assets/img/promotion/aviation.jpg'
-import * as voucher_02 from 'assets/img/promotion/clothing.jpeg'
-import * as voucher_03 from 'assets/img/promotion/food.jpeg'
-import * as voucher_04 from 'assets/img/promotion/hotel.jpeg'
-import * as voucher_05 from 'assets/img/promotion/shoes.jpg'
-import * as voucher_06 from 'assets/img/promotion/spa.jpeg'
+import promotionTab from 'data/transaction'
 
-const voucherList = [
-  {
-    id: 'voucher_01',
-    img: voucher_01,
-    name: 'Get voucher to have aviation discount 10%',
-    limit: 1,
-    point: 5,
-    category: 'new'
-  },
-  {
-    id: 'voucher_02',
-    img: voucher_02,
-    name: 'Be off clothing 20% for mostly popular brands',
-    limit: 10,
-    point: 2,
-    category: 'new'
-  },
-  {
-    id: 'voucher_03',
-    img: voucher_03,
-    name: 'Go out and have a delicious meal up sale 15%',
-    limit: 100,
-    point: 2,
-    category: 'new'
-  },
-  {
-    id: 'voucher_04',
-    img: voucher_04,
-    name: 'To relax at luxury hotel in Miami with discount 5%',
-    limit: 10,
-    point: 20,
-    category: 'new'
-  },
-  {
-    id: 'voucher_05',
-    img: voucher_05,
-    name: 'Don\'t hesitate get the most beautiful shoes with the price down to 12%',
-    limit: 100,
-    point: 1,
-    category: 'new'
-  },
-  {
-    id: 'voucher_06',
-    img: voucher_06,
-    name: 'Hurry! It\'s a complimentary service',
-    limit: 10,
-    point: 0,
-    category: 'new'
-  }
-]
 function AccountInfo() {
-  const transactionTab = [
-    {
-      id: 'receipt',
-      name: 'Receipts',
-      transactionList: [
-        {
-          id: 'transaction_01',
-          date: '25/04/2022',
-          cash: 1500000,
-          voucher_id: voucherList[0].id,
-          img: voucherList[0].img,
-          name: voucherList[0].name,
-          category: voucherList[0].category,
-          count: 1
-        },
-        {
-          id: 'transaction_02',
-          date: '25/04/2022',
-          cash: 1000000,
-          voucher_id: voucherList[1].id,
-          img: voucherList[1].img,
-          name: voucherList[1].name,
-          category: voucherList[1].category,
-          count: 1
-        },
-        {
-          id: 'transaction_03',
-          date: '25/04/2022',
-          cash: 100000,
-          voucher_id: voucherList[2].id,
-          img: voucherList[2].img,
-          name: voucherList[2].name,
-          category: voucherList[2].category,
-          count: 1
-        }
-      ]
-    },
-    {
-      id: 'point',
-      name: 'Points',
-      transactionList: []
-    }
-  ]
-  const [activeTab, setActiveTab] = useState(transactionTab[0])
+  
+  const [activeTab, setActiveTab] = useState(promotionTab[0])
 
   return (
     <div className="">
@@ -162,26 +65,41 @@ function AccountInfo() {
         <div className="bg-notice text-center text-white mt-5 pt-1">0 point expiring on 30 Jun 2023</div>
         <div className="tab shadow-md mb-5">
           {
-            transactionTab.map(transaction => (
-              <div className={`item ${transaction.id===activeTab.id&&'active'}`} key={transaction.id} onClick={() => setActiveTab(transaction)}>
-                {transaction.name}
+            promotionTab.map(promotion => (
+              <div className={`item ${promotion.id===activeTab.id&&'active'}`} key={promotion.id} onClick={() => setActiveTab(promotion)}>
+                {promotion.name}
               </div>
             ))
           }
         </div>
         <div className="pt-5 grid grid-cols-3 gap-4">
           {
-            activeTab.transactionList?.length?
-              activeTab.transactionList.map(detail => (
+            activeTab.id==='receipt'&&(activeTab.promotionList?.length?
+              activeTab.promotionList.map(detail => (
                 <div key={detail.id} className="shadow-lg cursor-pointer">
                   <img className="aspect-video w-96 rounded-t-2xl object-cover object-center" src={detail.img.default} />
                   <div className="p-4">
-                    <small className="voucher-category">{detail.category}</small>
-                    <h1 className="text-lg font-medium text-slate-600 pb-2">{detail.name}</h1>
+                    <small>Expire in {detail.date}</small>
+                    <h1 className="text-lg font-medium text-slate-600 pb-2 font-bold">{detail.name}</h1>
+                    <p>{detail.count} voucher{detail.count>1&&'s'}</p>
                   </div>
                 </div>
               )) :
-              <div>No Transaction Founds.</div>
+              <div>No Voucher Founds.</div>)
+          }
+          {
+            activeTab.id==='point'&&(activeTab.promotionList?.length?
+              activeTab.promotionList.map(detail => (
+                <div key={detail.id} className="shadow-lg cursor-pointer">
+                  <img className="aspect-video w-96 rounded-t-2xl object-cover object-center" src={detail.img.default} />
+                  <div className="p-4">
+                    <small>Expire in {detail.date}</small>
+                    <h1 className="text-lg font-medium text-slate-600 pb-2 font-bold">{detail.name}</h1>
+                    <p>{detail.count} voucher{detail.count>1&&'s'}</p>
+                  </div>
+                </div>
+              )) :
+              <div>No Voucher Founds.</div>)
           }
         </div>
         {/* <div>Showing past 3 months of transactions</div> */}

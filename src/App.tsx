@@ -8,7 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" render={() => <AccountInfo/>} exact />
+        <Route path="/" render={() => <Login/>} exact />
+        <Route path="/account" render={() => <AccountInfo/>} exact />
+        {/* <Route path="/promotion:id" render={() => <AccountInfo/>} exact /> */}
       </Switch>
     </BrowserRouter>
   );
