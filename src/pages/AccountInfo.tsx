@@ -52,12 +52,15 @@ function AccountInfo() {
             </div>
             <div className="absolute background-line">
               <img src={iconGroupStar} alt="" className="group-star"/>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 1.25 39 2.75" className="absolute left-0 right-0 block wave">
-                <path d="M -4 3 L -4 4 L -4 2 C 2 1 7 1 15 2 C 24 3 29 3 35 2 L 35 4 L -4 4" fill="#FF9595"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 1.25 39 3.905" className="curve-line">
-                <path d="M -4 2 C 2 1 7 1 15 2 C 25 4 30 3 35 2 L 35 4 C 30 5 25 6 15 4 C 7 3 2 3 -4 4" fill="#FF9595"/>
-              </svg>
+              <div className="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 1.25 39 2.75" className="absolute left-0 right-0 block wave">
+                  <path d="M -4 3 L -4 4 L -4 2 C 2 1 7 1 15 2 C 24 3 29 3 35 2 L 35 4 L -4 4" fill="#FF9595"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 1.25 39 3.905" className="curve-line">
+                  <path d="M -4 2 C 2 1 7 1 15 2 C 25 4 30 3 35 2 L 35 4 C 30 5 25 6 15 4 C 7 3 2 3 -4 4" fill="#FF9595"/>
+                </svg>
+              </div>
+              
               <div className="bg-white absolute backscene"></div>
             </div>
           </div>
