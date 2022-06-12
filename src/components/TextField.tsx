@@ -7,7 +7,7 @@ import {
 import {TextFieldType} from './TextField.type'
 
 function TextField(props: TextFieldType) {
-  const { name, label, placeholder, ...rest } = props
+  const { name, label, placeholder, type, ...rest } = props
   return (
     <div className="mb-6">
       {label && <div className="md:w-1/3">
@@ -15,7 +15,7 @@ function TextField(props: TextFieldType) {
       <div>
         <Field
           className="form-control inline-block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-          type="text"
+          type={type}
           name={name}
           id={name}
           placeholder={placeholder || ""} 
