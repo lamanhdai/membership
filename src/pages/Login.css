@@ -1,0 +1,16 @@
+.big_circle {
+  transform: rotate(180deg);
+  position: absolute;
+  left: 0;
+}
+
+.small_circle {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+}
+
+.solid_circle {
+  position: absolute;
+  left: 150px;
+}
